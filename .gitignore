@@ -1,33 +1,106 @@
-HELP.md
+############################
+# Java / Maven
+############################
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
+*.class
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+############################
+# Maven Wrapper (ignore if not using)
+############################
+.mvn/
+mvnw
+mvnw.cmd
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+############################
+# IntelliJ IDEA
+############################
+.idea/
 *.iml
 *.ipr
+*.iws
+out/
 
-### NetBeans ###
+############################
+# Eclipse / STS
+############################
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache/
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# NetBeans
+############################
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+############################
+# Gradle (in case added later)
+############################
+.gradle/
+
+############################
+# OS files
+############################
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+############################
+# Logs
+############################
+logs/
+*.log
+hs_err_pid*
+
+############################
+# Environment / Secrets
+############################
+.env
+.env.*
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
+
+############################
+# Kubernetes / Helm
+############################
+*.tgz
+charts/*/charts/
+charts/*/tmp/
+kubeconfig*
+*.kubeconfig
+
+############################
+# Docker
+############################
+docker-compose.override.yml
+
+############################
+# Test / Coverage
+############################
+coverage/
+*.exec
+*.out
+
+############################
+# Misc
+############################
+tmp/
+temp/
+.cache/
