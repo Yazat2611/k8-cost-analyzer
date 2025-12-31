@@ -30,12 +30,10 @@ public class KafkaConfig {
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JacksonJsonSerializer.class);
 
-        // Create ObjectMapper with JavaTimeModule
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 
-        // Use no-arg constructor and configure via setters
         JacksonJsonSerializer<PodEntity> jsonSerializer = new JacksonJsonSerializer<>();
         jsonSerializer.configure(Map.of(
                 "spring.json.add.type.headers", false
